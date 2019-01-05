@@ -3,7 +3,7 @@ Public SourceCodeFolder As String
 
 Public Sub ImportCodeModules()
 SourceCodeFolder = "M:\SP Projects\Administration\SW Source Code\Estimate Template\Current\"
-'On Error EXIT SUB
+        on error resume next
 Dim TotalModule, BasFiles
 If Dir(SourceCodeFolder, vbDirectory) <> vbNullString Then
         TotalModule = ThisWorkbook.VBProject.VBComponents.Count
